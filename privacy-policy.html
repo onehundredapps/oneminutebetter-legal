@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1 Minute Better Privacy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<style>
+  :root {
+    --paper:      #FFFFFF;
+    --panel:      #F6F2EE;
+    --ink:        #241F1C;
+    --ink-soft:   #5E534C;
+    --ink-faint:  #8B7F76;
+    --rule:       #E4DCD4;
+    --flag:       #C6421F;
+    --sun:        #FFE8A3;
+
+    --display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+    --body: "Source Serif 4", Georgia, "Times New Roman", serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper:     #16120F;
+      --panel:     #211B17;
+      --ink:       #F2ECE6;
+      --ink-soft:  #BCAEA3;
+      --ink-faint: #8E8177;
+      --rule:      #362C26;
+      --flag:      #FF8A5E;
+      --sun:       #6B5A2E;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper:     #16120F;
+    --panel:     #211B17;
+    --ink:       #F2ECE6;
+    --ink-soft:  #BCAEA3;
+    --ink-faint: #8E8177;
+    --rule:      #362C26;
+    --flag:      #FF8A5E;
+    --sun:       #6B5A2E;
+  }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap {
+    max-width: 40rem;
+    margin: 0 auto;
+    padding-inline: 20px;
+    padding-block: 56px 72px;
+  }
+
+  .eyebrow {
+    font-family: var(--display);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--flag);
+    margin: 0 0 10px;
+  }
+  h1 {
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: clamp(30px, 7vw, 42px);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+    margin: 0 0 12px;
+  }
+  .dateline {
+    font-family: var(--display);
+    font-size: 13px;
+    color: var(--ink-faint);
+    margin: 0 0 36px;
+  }
+
+  h2 {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 19px;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+    margin: 40px 0 12px;
+    padding-top: 22px;
+    border-top: 1px solid var(--rule);
+  }
+  p { margin: 0 0 16px; }
+  a { color: var(--flag); text-underline-offset: 2px; }
+  a:focus-visible, summary:focus-visible {
+    outline: 2px solid var(--flag);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  /* The one lifted object on the page: the claim everything else supports. */
+  .summary {
+    background: var(--panel);
+    border-left: 3px solid var(--flag);
+    padding: 22px 24px;
+    margin: 0 0 8px;
+  }
+  .summary p:last-child { margin-bottom: 0; }
+  .summary strong { font-weight: 600; }
+
+  .stored {
+    list-style: none;
+    margin: 0 0 16px;
+    padding: 0;
+    display: grid;
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+  .stored li {
+    background: var(--paper);
+    padding: 12px 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 14px;
+    align-items: baseline;
+  }
+  .stored code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 13px;
+    color: var(--ink);
+    background: var(--panel);
+    padding: 2px 7px;
+    border-radius: 3px;
+    white-space: nowrap;
+  }
+  .stored span {
+    color: var(--ink-soft);
+    font-size: 15px;
+    flex: 1 1 14rem;
+  }
+
+  footer {
+    margin-top: 44px;
+    padding-top: 22px;
+    border-top: 1px solid var(--rule);
+    font-family: var(--display);
+    font-size: 13px;
+    color: var(--ink-faint);
+  }
+  footer p { margin: 0 0 6px; }
+</style>
+
+<div class="wrap">
+  <p class="eyebrow">1 Minute Better</p>
+  <h1>Privacy Policy</h1>
+  <p class="dateline">Effective 22 September 2026</p>
+
+  <div class="summary">
+    <p><strong>1 Minute Better does not collect your data.</strong> There is no account to create, no
+      analytics, and no advertising. The app makes no network requests of its own — it has no networking
+      code at all.</p>
+    <p>Your wake plan and your streak stay on your iPhone. They are never sent anywhere, because there is
+      nowhere for them to be sent.</p>
+  </div>
+
+  <h2>What the app stores on your device</h2>
+  <p>Everything the app remembers is written to a private container shared between the app and its widget
+    (the App Group <code style="font-size:13px">group.com.brianmirenda.oneminutebetter</code>). That is:</p>
+  <ul class="stored">
+    <li><code>plan</code><span>Your starting wake time, your goal time, how many minutes earlier each day, which days are active, and any days you've frozen.</span></li>
+    <li><code>streak</code><span>The dates you held the commit button, and the nights you froze.</span></li>
+    <li><code>sleepLength</code><span>How long you like to sleep, used to work out tonight's bedtime.</span></li>
+    <li><code>alarm ids</code><span>Identifiers for the alarms the app has scheduled with iOS, so it can keep them in sync rather than pile up duplicates.</span></li>
+  </ul>
+  <p>Deleting the app removes all of it. There is no backup held by the developer, and no way to restore it.</p>
+
+  <h2>Alarms</h2>
+  <p>Alarms are scheduled through AlarmKit, Apple's system alarm framework. When you grant permission to
+    schedule alarms, that permission is used for exactly one thing: setting tomorrow's alarm one minute
+    earlier than today's. The alarms live in iOS. The app does not read anything else from your device.</p>
+
+  <h2>Subscriptions</h2>
+  <p>The optional subscription is sold through Apple's App Store using StoreKit. Apple handles the payment
+    and tells the app only whether a valid subscription exists. Your payment details, your Apple Account,
+    and your name are never visible to the app or to the developer. Apple's handling of that transaction is
+    covered by <a href="https://www.apple.com/legal/privacy/" rel="noopener">Apple's Privacy Policy</a>.</p>
+
+  <h2>No tracking, no third parties</h2>
+  <p>The app contains no analytics SDK, no advertising SDK, and no third-party libraries of any kind — it
+    ships with zero external dependencies. Nothing about you is tracked across apps or websites, and there
+    is no data to sell, share, or hand to anyone.</p>
+
+  <h2>Children</h2>
+  <p>The app is not directed at children and collects no personal information from anyone, regardless of age.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If a future version of the app ever collects or transmits anything, this policy will be updated before
+    that version ships, and the effective date above will change. A version that quietly started sending
+    data would contradict the whole point of the app.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about this policy can be sent to
+    <a href="mailto:1hundredapps@gmail.com">1hundredapps@gmail.com</a>.</p>
+
+  <footer>
+    <p>1 Minute Better · Brian Mirenda</p>
+    <p>Last updated 22 September 2026</p>
+  </footer>
+</div>

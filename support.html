@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1 Minute Better Support</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<style>
+  :root {
+    --paper:      #FFFFFF;
+    --panel:      #F6F2EE;
+    --ink:        #241F1C;
+    --ink-soft:   #5E534C;
+    --ink-faint:  #8B7F76;
+    --rule:       #E4DCD4;
+    --flag:       #C6421F;
+    --sun:        #FFE8A3;
+
+    --display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+    --body: "Source Serif 4", Georgia, "Times New Roman", serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper:     #16120F;
+      --panel:     #211B17;
+      --ink:       #F2ECE6;
+      --ink-soft:  #BCAEA3;
+      --ink-faint: #8E8177;
+      --rule:      #362C26;
+      --flag:      #FF8A5E;
+      --sun:       #6B5A2E;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper:     #16120F;
+    --panel:     #211B17;
+    --ink:       #F2ECE6;
+    --ink-soft:  #BCAEA3;
+    --ink-faint: #8E8177;
+    --rule:      #362C26;
+    --flag:      #FF8A5E;
+    --sun:       #6B5A2E;
+  }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap {
+    max-width: 40rem;
+    margin: 0 auto;
+    padding-inline: 20px;
+    padding-block: 56px 72px;
+  }
+
+  .eyebrow {
+    font-family: var(--display);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--flag);
+    margin: 0 0 10px;
+  }
+  h1 {
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: clamp(30px, 7vw, 42px);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+    margin: 0 0 12px;
+  }
+  .dateline {
+    font-family: var(--display);
+    font-size: 13px;
+    color: var(--ink-faint);
+    margin: 0 0 36px;
+  }
+
+  h2 {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 19px;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+    margin: 40px 0 12px;
+    padding-top: 22px;
+    border-top: 1px solid var(--rule);
+  }
+  p { margin: 0 0 16px; }
+  a { color: var(--flag); text-underline-offset: 2px; }
+  a:focus-visible, summary:focus-visible {
+    outline: 2px solid var(--flag);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  /* The one lifted object on the page: the claim everything else supports. */
+  .summary {
+    background: var(--panel);
+    border-left: 3px solid var(--flag);
+    padding: 22px 24px;
+    margin: 0 0 8px;
+  }
+  .summary p:last-child { margin-bottom: 0; }
+  .summary strong { font-weight: 600; }
+
+  footer {
+    margin-top: 44px;
+    padding-top: 22px;
+    border-top: 1px solid var(--rule);
+    font-family: var(--display);
+    font-size: 13px;
+    color: var(--ink-faint);
+  }
+  footer p { margin: 0 0 6px; }
+  ol { margin: 0 0 16px; padding-left: 1.3em; }
+  li { margin: 0 0 6px; }
+  .path {
+    font-family: var(--display);
+    font-size: 15px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+</style>
+
+<div class="wrap">
+  <p class="eyebrow">1 Minute Better</p>
+  <h1>Support</h1>
+  <p class="dateline">For the iPhone app</p>
+
+  <div class="summary">
+    <p><strong>Write to <a href="mailto:1hundredapps@gmail.com">1hundredapps@gmail.com</a>.</strong> A person reads
+      every message. Most questions are answered below.</p>
+  </div>
+
+  <h2>My alarm didn't ring</h2>
+  <p>The app can only ring if iOS lets it schedule alarms. Open <span class="path">Settings ▸ Apps ▸ 1 Minute Better</span>
+    and make sure alarms are allowed, then open the app once so it can put tomorrow's alarm back.</p>
+  <p>The app keeps about a month of alarms scheduled ahead and tops them up every time you open it or stop
+    an alarm, so as long as you use it, it never runs dry.</p>
+
+  <h2>I need a break</h2>
+  <p>Open the app, tap the gear, and choose <span class="path">Freeze tomorrow</span> or
+    <span class="path">Freeze 7 days</span>. The alarm keeps ringing, but it stops moving earlier for as
+    many days as you froze, and a frozen night doesn't count against your streak. When the freeze ends the
+    march carries on from where it was; nothing resets.</p>
+
+  <h2>I want to start again</h2>
+  <p>Tap the gear, then <span class="path">Start over</span>. This clears your plan and your streak and takes
+    you back to the first question.</p>
+
+  <h2>The lock-screen widget</h2>
+  <p>Touch and hold the lock screen, tap <span class="path">Customize</span>, then the lock screen, then the
+    widget area, and pick <span class="path">1 Minute Better</span>. It shows tomorrow's alarm, your day number
+    and whether you've committed tonight. The same widget works on the home screen.</p>
+
+  <h2>Subscription</h2>
+  <p>The first seven alarms are free. To keep the alarm going from the eighth, the app asks you to subscribe
+    for $0.99 a month. You can also subscribe earlier from <span class="path">Settings ▸ Subscription</span> in the app.</p>
+  <ol>
+    <li><strong>Cancel:</strong> open the iPhone Settings app, tap your name, then
+      <span class="path">Subscriptions</span>. Or in the app, tap the gear, then
+      <span class="path">Manage subscription</span>.</li>
+    <li><strong>Restore after reinstalling:</strong> tap <span class="path">Restore</span> on the subscription
+      screen. An active subscription is usually picked up on its own.</li>
+    <li><strong>Refunds</strong> are handled by Apple at
+      <a href="https://reportaproblem.apple.com" rel="noopener">reportaproblem.apple.com</a>.</li>
+  </ol>
+
+  <h2>Privacy</h2>
+  <p>The app collects nothing and has no account; your plan never leaves your iPhone. The details are in the
+    <a href="privacy-policy.html">privacy policy</a>.</p>
+
+  <footer>
+    <p>1 Minute Better · Brian Mirenda</p>
+  </footer>
+</div>
